@@ -9,26 +9,23 @@ package challenges
  * Sample Output: [4, 9, 25, 49, 81]
  */
 
+ 
 fun sortedSquares(list: List<Int>): List<Int> {
-    // Create an empty list
-    // Add the square values of 2,3,5,7,9 to that list
-    
-    val result = mutableListOf<Int>()
+    // Create a mutable list to store the squared values.
+    val squaredList = mutableListOf<Int>()
 
-    val twoSquared = 2*2
-    result.add(twoSquared)
+    // Iterate through each number in the input list.
+    for (num in list) {
+        // Square the number.
+        val square = num * num
 
-    val threeSquared = 3*3
-    result.add(threeSquared)
+        // Add the squared value to the list.
+        squaredList.add(square)
+    }
 
-    val fiveSquared = 5*5
-    result.add(fiveSquared)
+    // Sort the list in ascending order.
+    squaredList.sort()
 
-    val sevenSquared = 7*7
-    result.add(sevenSquared)
-
-    val nineSquared = 9*9
-    result.add(nineSquared)
-
-    return result
+    // Return the sorted list of squared values.
+    return squaredList
 }
